@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(27, 26, 26);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 90px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+header.sticky {
+    background: rgba(255, 255, 255, 1);
+}
+
+.header:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.logo {
+    flex: 1;
+    margin-left: 80px;
+    width: 40px;
+    height: 90px;
+    box-shadow: inset 10px 10px 10px rgb(0, 0, 0, 0.05), 15px 25px 10px rgb(0, 0, 0, 0.05), 15px 15px 15px rgb(0, 0, 0, 0.05), inset -10px -10px 15px rgb(255, 255, 255, 0.09);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.logo ion-icon {
+    font-size: 120px;
+    color: #444;
+}
+
+.menu {
+    flex: 3;
+    display: flex;
+}
+
+.menu>li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.menu>li:hover .category {
+    visibility: visible;
+    top: 20px;
+}
+
+.menu>li:hover .nations {
+    visibility: visible;
+    top: 20px;
+}
+
+.nations {
+    position: absolute;
+    margin: 35px 0 0 -20px;
+    left: 0;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.2s;
+}
+
+.nations ul {
+    width: 150px;
+    background-color: rgb(153, 138, 138);
+    border: 2px solid rgb(216, 36, 111);
+}
+
+.nations ul li {
+    padding: 10px 0 5px 20px;
+}
+
+.nations ul li a {
+    color: white;
+}
+
+.nations ul li a:hover {
+    color: rgb(230, 29, 29);
+}
+
+
+/*---------------------movie-new------------*/
+
+
+/*-------------------------*/
+
+.category {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -108px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.2s;
+}
+
+.category_itle {
+    position: relative;
+    width: 704px;
+    background-color: rgb(109, 90, 90);
+    display: flex;
+    border: 4px solid rgb(122, 12, 165);
+}
+
+.Category-list li a {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Category-list li a:hover {
+    color: rgb(123, 13, 214);
+}
+
+.Category-list li {
+    padding: 12px 0 10px 20px;
+}
+
+
+/*--------------------------------------*/
+
+.menu li a {
+    font-size: 14px;
+    font-weight: bold!important;
+    display: block;
+    line-height: 20px;
+    color: rgb(231, 10, 10);
+}
+
+.menu li a:hover {
+    color: #2d0675;
+}
+
+.menu li a:hover {
+    border-bottom: 3px solid #4e0a86;
+    margin-top: 10px;
+}
+
+
+/*--------- hover con của Nữ --------*/
+
+.menu>li:hover .sub-menu {
+    visibility: visible;
+    top: 50px;
+}
+
+
+/* -----------------other----------*/
+
+.other {
+    flex: 1;
+    display: flex;
+}
+
+.other>li {
+    padding: 0 14px;
+    position: relative;
+}
+
+.other>li a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.other>li:first-child {
+    position: relative;
+}
+
+.other>li:first-child input {
+    width: 200px;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+}
+
+.other>li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+}
+
+.btn a {
+    font-size: 14px;
+    font-weight: bold!important;
+    color: rgb(151, 20, 228);
+}
+
+.btn a:hover {
+    color: rgb(161, 101, 23);
+}
+
+
+/*----------------------silder-----------------*/
+
+#Slider {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+}
+
+
+/* ------------riponship của ảnh------------ */
+
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 1s;
+    /* di chuyển nhẹ nhành */
+}
+
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/*-------------------------------*/
+
+.dot-container {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+
+/* ảnh đến đâu thì hiện đổi màu đến đấy */
+
+.dot.active {
+    background-color: #333;
+}
+
+
+/*---------------------------------*/
+
+.analysis {
+    width: 800px;
+    height: 200px;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-15%);
+    margin-left: 30px;
+    border: 1.1px solid rgb(95, 17, 158);
+    border-radius: 8px;
+}
+
+.analysis h3 {
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    color: #831192;
+}
+
+.analysis p {
+    text-align: center;
+    padding: 15px;
+    color: rgb(118, 25, 155);
+}
+
+
+/*---------container----------------*/
+
+.footer {
+    width: 100%;
+    height: 380px;
+    margin-top: 25px;
+    border-bottom: 4px solid rebeccapurple;
+}
+
+.footer-view {
+    display: flex;
+}
+
+.footer_list {
+    margin: 0 auto;
+}
+
+.footer_list li {
+    padding: 10px 0 5px 0;
+}
+
+.footer_list h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(133, 15, 187);
+    padding-bottom: 10px;
+}
+
+.footer_list li a {
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(197, 17, 197);
+    display: flex;
+}
+
+.footer_list li a:hover {
+    color: rgb(121, 19, 161);
+}
+
+.footer_list li a img {
+    width: 35px;
+    height: 35px;
+}
+
+
+/*----------------*/
+
+.footer-title {
+    width: 100%;
+    height: 190.8px;
+    background-color: #000;
+    margin-top: 20px;
+}
+
+.footer-title ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-title ul li {
+    margin-top: 45px;
+}
+
+.footer-title ul li p {
+    color: #fff;
+    line-height: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    margin-top: 40px;
+}
+
+.footer_list-item a span {
+    margin-top: 10px;
+    display: block;
+    margin-left: 5px;
+}
+
+
+/*-------------------*/
+
+.tabs {
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #8e0aa0;
+    transition: all 0.2s ease;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #831192;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 28px 50px;
+}
+
+.tab-pane {
+    color: #333;
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
